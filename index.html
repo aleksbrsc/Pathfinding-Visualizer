@@ -638,17 +638,17 @@
                     // Map cell classes to values
                     let cellValue;
                     if (cellClass === 'unvisited') {
-                        cellValue = 0; 
+                        cellValue = UNVISITED_NODE; 
                     } else if (cellClass === 'wall') {
-                        cellValue = 1; 
+                        cellValue = WALL_NODE; 
                     } else if (cellClass === 'start') {
-                        cellValue = 2;
+                        cellValue = START_NODE;
                     } else if (cellClass === 'end') {
-                        cellValue = 3; 
+                        cellValue = END_NODE; 
                     } else if (cellClass === 'visited') {
-                        cellValue = 4
+                        cellValue = VISITED_NODE;
                     } else if (cellClass === 'path') {
-                        cellValue = 5
+                        cellValue = PATH_NODE;
                     }
 
                     mazeMatrix[i][j] = cellValue;
@@ -764,7 +764,7 @@
         }
 
         function handleCellClick(event) {
-            if (currentStatus === STATUS.VISUALIZING && currentStatus === STATUS.GENERATING) { return }
+            if (currentStatus === STATUS.VISUALIZING || currentStatus === STATUS.GENERATING) { return }
             if (currentStatus === STATUS.PATH_FOUND || currentStatus === STATUS.PATH_NOT_FOUND) { resetSolution() }
             
             updateStatus(STATUS.PAINTING)
@@ -812,7 +812,7 @@
         }
 
         function generateMazeWhiteNoise(rows, columns) {
-            // Initialize maze with all wall nodes
+            // Initialize maze with all walls
             let maze = Array.from({ length: rows }, () => Array(columns).fill(WALL_NODE)); 
             
             // Choose a cell and mark it as a passage
@@ -872,10 +872,7 @@
         
         function generateMazeDFS(rows, columns) {
             // Initialize maze with all walls
-            let maze = new Array(rows);
-            for (let i = 0; i < rows; i++) {
-                maze[i] = new Array(columns).fill(WALL_NODE);
-            }
+            let maze = Array.from({ length: rows }, () => Array(columns).fill(WALL_NODE));
 
             function dfs(row, col) {
                 // the 4 possible directions that we can move in
@@ -915,10 +912,7 @@
 
         function generateMazePrims(rows, columns) {
             // Initialize maze with all walls
-            let maze = new Array(rows);
-            for (let i = 0; i < rows; i++) {
-                maze[i] = new Array(columns).fill(WALL_NODE);
-            }
+            let maze = Array.from({ length: rows }, () => Array(columns).fill(WALL_NODE));
 
             let startRow = 1;
             let startCol = 1;
