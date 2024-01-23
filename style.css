@@ -45,7 +45,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 nav ul li{
@@ -287,10 +287,6 @@ nav ul li.dropdown .dropdown-content a:hover {
     nav ul li.dropdown {
         margin: 10px 10px;
     }
-
-    /* nav ul li a {
-        font-size: 1.3vw;
-    } */
 }
 
 @media screen and (max-width: 1099px) {
