@@ -288,7 +288,7 @@ function initApp() {
                 maze.style.setProperty('--start-background-color', '#418232');
                 maze.style.setProperty('--end-background-color', '#a72c2c');
                 maze.style.setProperty('--path-animation', 'pathDark 3s infinite');
-                header.style.setProperty('--header-background-color', '#1e1e1e');
+                document.body.style.setProperty('--header-background-color', '#1e1e1e');
                 header.style.setProperty('--dropdown-content-hover-background-color', '#1b1b1b');
                 document.body.style.setProperty('--body-background-color','#121212');
 
@@ -340,7 +340,7 @@ function initApp() {
                 header.style.setProperty('--clear-background-color', '#FF6868');
                 header.style.setProperty('--visualize-background-color', '#90EE90');
                 maze.style.setProperty('--path-animation', 'pathDefault 3s infinite');
-                header.style.setProperty('--header-background-color', '#f0f0f0');
+                document.body.style.setProperty('--header-background-color', '#f0f0f0');
                 header.style.setProperty('--dropdown-content-hover-background-color', '#f1f1f1');
                 document.body.style.setProperty('--body-background-color','white');
                 document.getElementById('icon').src = 'images/pathiconblack.svg';
