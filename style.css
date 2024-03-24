@@ -324,13 +324,13 @@ nav ul li.dropdown .dropdown-content a:hover {
     }
 }
 
-@media screen and (max-width: 902px) {
+/* @media screen and (max-width: 902px) {
     .title {
         font-size: 20px;
     }
-}
+} */
 
-@media screen and (max-width: 861px) {
+@media screen and (max-width: 902px) {
     .title {
         display: none
     }
@@ -344,7 +344,7 @@ nav ul li.dropdown .dropdown-content a:hover {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 729px) {
     #icon {
         margin-right: 10px; 
     }
@@ -442,6 +442,10 @@ nav ul li.dropdown .dropdown-content a:hover {
 @media screen and (max-width: 480px) {
     #header {
         max-width: 100%;
+    }
+
+    #icontitle {
+        margin-top: -1rem;
     }
 
     .title {
