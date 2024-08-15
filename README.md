@@ -28,5 +28,3 @@ Clear and Visualize:
 4. Click "Visualize" to see the algorithm in action
 5. Click "Reset" when maze is visualized to reset the visualization.
 6. Click "Clear" to clear the entire maze
-
-[![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
